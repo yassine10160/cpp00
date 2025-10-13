@@ -15,6 +15,7 @@
 PhoneBook::PhoneBook()
 {
 	nbOfContacts = 0;
+	contactToChange = -1;
 }
 
 void PhoneBook::add(char **info)
@@ -24,4 +25,6 @@ void PhoneBook::add(char **info)
 	realIndex = this->nbOfContacts;
 	if (nbOfContacts == 9)
 		realIndex = 0;
+
+
 }
