@@ -6,22 +6,29 @@
 /*   By: yassinefahfouhi <yassinefahfouhi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 17:21:52 by yassinefahf       #+#    #+#             */
-/*   Updated: 2025/10/13 15:51:22 by yassinefahf      ###   ########.fr       */
+/*   Updated: 2025/10/15 20:15:47 by yassinefahf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class contact
+#include <iostream>
+
+class Contact
 {
 private:
-	char *name;
-	char *lastName;
-	char *nickName;
-	int phoneNumber;
-	char *darkestSecret;
+	std::string name;
+	std::string lastName;
+	std::string nickName;
+	std::string phoneNumber;
+	std::string darkestSecret;
 
 public:
-	contact(const contact &newContact);
+	Contact();
+	Contact(const Contact &newContact);
 	int getNbContact();
-	contact getContact(int index);
-	contact &operator=(const contact &newContact);
+	Contact &operator=(const Contact &newContact);
+	void setName(const std::string &name);
+	void setDarkestSecret(const std::string &darkestSecret);
+	void setPhoneNumber(const std::string &phoneNumber);
+	void setNickName(const std::string &nickName);
+	void setLastName(const std::string &lastName);
 };

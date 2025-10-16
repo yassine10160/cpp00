@@ -6,13 +6,17 @@
 /*   By: yassinefahfouhi <yassinefahfouhi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 11:48:55 by yassinefahf       #+#    #+#             */
-/*   Updated: 2025/10/13 15:56:36 by yassinefahf      ###   ########.fr       */
+/*   Updated: 2025/10/15 20:20:33 by yassinefahf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
-contact::contact(const contact &newContact)
+Contact::Contact()
+{
+}
+
+Contact::Contact(const Contact &newContact)
 {
 	name = newContact.name;
 	lastName = newContact.lastName;
@@ -21,10 +25,36 @@ contact::contact(const contact &newContact)
 	darkestSecret = newContact.darkestSecret;
 }
 
-contact &contact::operator=(const contact &newcontact)
+Contact &Contact::operator=(const Contact &newcontact)
 {
 	this->darkestSecret = newcontact.darkestSecret;
 	this->lastName = newcontact.lastName;
 	this->name = newcontact.name;
 	this->phoneNumber = newcontact.phoneNumber;
+	return (*this);
+}
+
+void Contact::setName(const std::string &name)
+{
+	this->name = name;
+}
+
+void Contact::setLastName(const std::string &lastName)
+{
+	this->lastName = lastName;
+}
+
+void Contact::setDarkestSecret(const std::string &darkestSecret)
+{
+	this->darkestSecret = darkestSecret;
+}
+
+void Contact::setNickName(const std::string &nickName)
+{
+	this->nickName = nickName;
+}
+
+void Contact::setPhoneNumber(const std::string &phoneNumber)
+{
+	this->phoneNumber = phoneNumber;
 }
