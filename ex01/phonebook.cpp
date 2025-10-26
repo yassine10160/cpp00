@@ -6,7 +6,7 @@
 /*   By: yassinefahfouhi <yassinefahfouhi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 11:39:58 by yassinefahf       #+#    #+#             */
-/*   Updated: 2025/10/15 20:54:04 by yassinefahf      ###   ########.fr       */
+/*   Updated: 2025/10/26 19:36:17 by yassinefahf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,10 @@ bool PhoneBook::isPhoneNumber(const std::string &PhoneNumber)
 	int i;
 
 	i = 0;
-	while (PhoneNumber[i])
-	{
-		if (!isdigit(PhoneNumber[i]))
-			return (false);
+	while (PhoneNumber[i] && isdigit(PhoneNumber[i]))
 		i++;
-	}
+	if (i != 10)
+		return (false);
 	return (true);
 }
 
@@ -58,6 +56,9 @@ int PhoneBook::setNewContact(std::string &info)
 	std::cout << "enter your darkest secret:  " << std::endl;
 	std::cin >> info;
 	add(info, DARKESTSECRET);
+	std::cout << "\n";
+	std::cout << "Contact added !" << std::endl;
+	std::cout << "\n";
 	return (1);
 }
 
