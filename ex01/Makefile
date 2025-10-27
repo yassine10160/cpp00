@@ -1,6 +1,6 @@
 NAME= phoneBook
 CC=c++
-FLAGS=-Wall -Wextra -Werror
+FLAGS=-Wall -Wextra -Werror -std=c++98
 OBJDIR = .obj
 SRCS=PhoneBook.cpp Contact.cpp main.cpp
 HEADERS=

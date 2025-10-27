@@ -31,4 +31,10 @@ public:
 	void setPhoneNumber(const std::string &phoneNumber);
 	void setNickName(const std::string &nickName);
 	void setLastName(const std::string &lastName);
+	std::string getName();
+	std::string getLastName();
+	std::string getNickName();
+	std::string	getPhoneNumber();
+	std::string getDarkestSecret();
+
 };

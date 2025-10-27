@@ -58,3 +58,29 @@ void Contact::setPhoneNumber(const std::string &phoneNumber)
 {
 	this->phoneNumber = phoneNumber;
 }
+
+std::string	Contact::getName()
+{
+	return this->name;
+}
+
+
+std::string	Contact::getLastName()
+{
+	return this->lastName;
+}
+
+std::string	Contact::getNickName()
+{
+	return this->nickName;
+}
+
+std::string	Contact::getPhoneNumber()
+{
+	return this->phoneNumber;
+}
+
+std::string	Contact::getDarkestSecret()
+{
+	return this->darkestSecret;
+}
